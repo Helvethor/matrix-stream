@@ -20,7 +20,7 @@ bin/$(NAME): $(APP_C) $(LIB_C) $(LIB_H)
 
 bin-linked: $(APP_C) lib
 	@mkdir -p bin
-	$(CC) $(APP_C) $(C_FLAGS) $(LD_FLAGS) -l$(NAME) -L./lib -o bin/$(APP_NAME)
+	$(CC) $(APP_C) $(C_FLAGS) $(APP_LD_FLAGS) $(LD_FLAGS) -l$(NAME) -L./lib -o bin/$(APP_NAME)
 
 test-client: src/test_client.c $(LIB_C) $(LIB_H)
 	@mkdir -p bin
